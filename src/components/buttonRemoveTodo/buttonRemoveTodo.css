@@ -1,5 +1,12 @@
-.img-removeTodo{
+.img-removeTodo {
     width: 30px;
     height: 30px;
-    background-color: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .img-removeTodo {
+        width: 25px;
+        height: 25px;
+    }
 }

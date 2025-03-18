@@ -1,0 +1,15 @@
+.title {
+    display: flex;
+    justify-content: center;
+    color: #0e110c;
+    font-size: 2.5rem; 
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 1.8rem; 
+    }
+  }
+  
