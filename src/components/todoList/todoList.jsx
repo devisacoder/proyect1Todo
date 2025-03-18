@@ -7,12 +7,12 @@ export const TodoList = () => {
     return(
         <section className="containerTodoList">
             <h1>Todo List</h1>
-            <ul>
+            <ul className="containerListTask">
                 <li className="containerLi"> 
                     <button className="buttonCompleteTodo">
                         <CompleteTodo/>
                     </button>
-                    Lavar loza 
+                    <span className="todo-text">Lavar loza</span>
                     <button className="buttonRemoveTodo">
                         <ButtonRemoveTodo/>
                     </button>
@@ -21,7 +21,7 @@ export const TodoList = () => {
                     <button className="buttonCompleteTodo">
                         <CompleteTodo/>
                     </button>
-                    Lavar loza 
+                    <span className="todo-text">Lavar loza</span>
                     <button className="buttonRemoveTodo">
                         <ButtonRemoveTodo/>
                     </button>
