@@ -1,0 +1,19 @@
+.containerTodoList{
+    background-color: rgb(255, 240, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerLi{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.buttonRemoveTodo{
+    background: transparent;
+    border: none;
+}
+.buttonCompleteTodo{
+    background: transparent;
+    border: none;
+}
