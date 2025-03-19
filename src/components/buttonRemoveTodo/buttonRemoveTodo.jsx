@@ -1,8 +1,9 @@
-import { useTodo } from '../../hooks/useHooks'
+import { useContext } from 'react'
 import './buttonRemoveTodo.css'
+import { TodoContext } from '../../context/TodoContext'
 
 export const ButtonRemoveTodo = ({todo}) => {
-    const { deleteTodo } = useTodo()
+    const { deleteTodo } = useContext(TodoContext)
 
     const onClick = () => {
         deleteTodo(todo)

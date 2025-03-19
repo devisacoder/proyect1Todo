@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import "./addTask.css"
-import { useTodo } from "../../hooks/useHooks"
+import { TodoContext } from "../../context/TodoContext"
 
 export const AddTask = ({ onlyButton, onlyForm, open, setOpen }) => {
   const [task, setTask] = useState("")
-  const { addTodo } = useTodo()
+  const { addTodo } = useContext(TodoContext)
 
   const handleClick = () => {
     setOpen(prev => !prev)
@@ -16,10 +16,9 @@ export const AddTask = ({ onlyButton, onlyForm, open, setOpen }) => {
 
     const newTodo = {
       title: task,
-      state: false,
+      state: "PENDIENTE"
     }
 
-    console.log("Tarea agregada:", task)
     addTodo(newTodo)
     setTask("")
     setOpen(false)

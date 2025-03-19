@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { AddTask } from '../addTask/addTask'
 import './Search.css'
+import { TodoContext } from '../../context/TodoContext'
 
 export const Search = () => {
   const [open, setOpen] = useState(false)
+  const { busqueda, setBusqueda } = useContext(TodoContext)
 
   return (
     <section className='search-wrapper'>
@@ -14,6 +16,8 @@ export const Search = () => {
               type="text" 
               placeholder="Buscar"
               className='input-search'
+              value={busqueda}
+              onChange={(e) => setBusqueda(e.target.value)}
             />
             <button aria-label='boton para buscar productos' className='button-input'>
               <img className='img-search' src="src/assets/search.svg" alt="" />

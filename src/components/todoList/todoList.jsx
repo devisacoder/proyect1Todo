@@ -1,15 +1,16 @@
 import { ButtonRemoveTodo } from "../buttonRemoveTodo/buttonRemoveTodo"
 import { CompleteTodo } from "../completeTodo/completeTodo"
 import './todoList.css'
-import { useTodo } from "../../hooks/useHooks"  
+import { useContext } from "react"
+import { TodoContext } from "../../context/TodoContext.jsx"
 
 export const TodoList = () => {
-    const { todos } = useTodo()
+    const { todosFiltrados } = useContext(TodoContext)
 
     return(
         <section className="containerTodoList">
             <ul className="containerListTask">
-                {todos.map((todo) => (
+                {todosFiltrados.map((todo) => (
                     <li className="containerLi" key={todo.id}> 
                         <button className="buttonCompleteTodo">
                             <CompleteTodo/>

@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     margin: 1%;
+    color: #ffffff;
   }
   
   .container-search-group {
@@ -17,12 +18,13 @@
   }
   
   .container-search {
-    border: 1px solid #0e110c;
+    border: 1px solid #000000;
     border-radius: 8px;
     display: flex;
     align-items: center;
     width: 24rem;
     overflow: hidden;
+    background-color: #e5cac8;
   }
   
   .input-search {
@@ -34,7 +36,7 @@
   }
   
   input::placeholder {
-    color: #0e110c; 
+    color: #000000; 
   }
   
   .button-input {
