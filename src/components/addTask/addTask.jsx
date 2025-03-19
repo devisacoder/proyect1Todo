@@ -1,8 +1,10 @@
 import { useState } from "react"
 import "./addTask.css"
+import { useTodo } from "../../hooks/useHooks"
 
 export const AddTask = ({ onlyButton, onlyForm, open, setOpen }) => {
   const [task, setTask] = useState("")
+  const { addTodo } = useTodo()
 
   const handleClick = () => {
     setOpen(prev => !prev)
@@ -11,7 +13,14 @@ export const AddTask = ({ onlyButton, onlyForm, open, setOpen }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (!task.trim()) return
+
+    const newTodo = {
+      title: task,
+      state: false,
+    }
+
     console.log("Tarea agregada:", task)
+    addTodo(newTodo)
     setTask("")
     setOpen(false)
   }
