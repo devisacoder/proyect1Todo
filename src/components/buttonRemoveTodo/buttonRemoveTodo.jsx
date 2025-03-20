@@ -6,7 +6,7 @@ export const ButtonRemoveTodo = ({todo}) => {
     const { deleteTodo } = useContext(TodoContext)
 
     const onClick = () => {
-        deleteTodo(todo)
+        deleteTodo(todo.id)
     }
     
     return (

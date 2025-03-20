@@ -48,6 +48,21 @@ export const TodoProvider = ({ children }) => {
     }
   }
 
+  const updateTodoStatus = async (id, newStatus) => {
+    try{
+      await fetch(`${API}/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ state: newStatus})
+      })
+      await fetchTodos()
+    } catch (error) {
+      console.log("Error al actualizar el estado de la tarea", error)
+    }
+  }
+
   useEffect(() => {
     fetchTodos()
   }, [])
@@ -59,7 +74,8 @@ export const TodoProvider = ({ children }) => {
       deleteTodo,
       busqueda,
       setBusqueda,
-      todosFiltrados
+      todosFiltrados,
+      updateTodoStatus
     }}>
       {children}
     </TodoContext.Provider>

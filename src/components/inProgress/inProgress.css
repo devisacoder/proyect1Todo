@@ -1,11 +1,9 @@
-.img-removeTodo {
+.img-inProgress{
     width: 34px;
     height: 34px;
-    cursor: pointer;
 }
-
 @media screen and (max-width: 480px) {
-    .img-removeTodo {
+    .img-inProgress {
         width: 25px;
         height: 25px;
     }

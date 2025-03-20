@@ -32,10 +32,9 @@
 }
 
 .containerLi {
-    list-style: none;
-    display: flex;
+    display: flex; 
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px;
     font-size: larger;
     color: rgb(56, 56, 56);
@@ -47,8 +46,11 @@
     background: transparent;
     border: none;
 }
-
-.buttonCompleteTodo {
+.buttonInProgress{
+    background-color: transparent;
+    border: none;
+}
+.buttonCompleteTodo{
     background: transparent;
     border: none;
 }

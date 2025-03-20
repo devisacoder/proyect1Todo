@@ -3,6 +3,7 @@ import { CompleteTodo } from "../completeTodo/completeTodo"
 import './todoList.css'
 import { useContext } from "react"
 import { TodoContext } from "../../context/TodoContext.jsx"
+import { InProgress } from "../inProgress/inProgress.jsx"
 
 export const TodoList = () => {
     const { todosFiltrados } = useContext(TodoContext)
@@ -12,13 +13,18 @@ export const TodoList = () => {
             <ul className="containerListTask">
                 {todosFiltrados.map((todo) => (
                     <li className="containerLi" key={todo.id}> 
-                        <button className="buttonCompleteTodo">
-                            <CompleteTodo/>
-                        </button>
-                        <span className="todo-text">{todo.title}</span>
-                        <button className="buttonRemoveTodo">
-                            <ButtonRemoveTodo todo={todo.id}/>
-                        </button>
+                        {todo.title}
+                        <div>
+                            <button className="buttonCompleteTodo">
+                                <CompleteTodo todo={todo}/>
+                            </button>
+                            <button className="buttonRemoveTodo">
+                                <ButtonRemoveTodo todo={todo}/>
+                            </button>
+                            <button className="buttonInProgress">
+                                <InProgress todo={todo}/>
+                            </button>
+                        </div>
                     </li>
                 ))}
             </ul>
