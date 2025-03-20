@@ -1,75 +1,77 @@
 .img-addTask {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    margin-left: 8px;
-  }
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 8px;
+  background-color: #d86a75;
+  border-radius: 50%;
+}
   
+.containerForm {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+}
+
+.containerForm input {
+  flex: 1;
+  border: 1px solid #e34c5a;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
+  padding: 0.6rem 0.2rem;
+}
+
+.containerForm input:focus {
+  border-color: #e65563;
+}
+
+.containerForm button {
+  background-color: #e34c5a;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.containerForm button:hover {
+  background-color: #d86a75;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 480px) {
   .containerForm {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    background-color: #f8f9fa;
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 380px;
-    margin: auto;
+    padding: 0.5rem;
   }
   
   .containerForm input {
-    flex: 1;
-    border: 1px solid #e34c5a;
-    border-radius: 6px;
-    font-size: 1rem;
-    outline: none;
-    transition: border 0.2s ease;
-    padding: 0.6rem 0.2rem;
-  }
-  
-  .containerForm input:focus {
-    border-color: #e65563;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.2rem;
   }
   
   .containerForm button {
-    background-color: #e34c5a;
-    color: white;
-    border: none;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
   
-  .containerForm button:hover {
-    background-color: #d86a75;
+  .img-addTask {
+    width: 30px;
+    height: 30px;
   }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .containerForm {
-      padding: 0.5rem;
-    }
-    
-    .containerForm input {
-      font-size: 0.9rem;
-      padding: 0.4rem 0.2rem;
-    }
-    
-    .containerForm button {
-      font-size: 0.9rem;
-      padding: 0.4rem 0.8rem;
-    }
-    
-    .img-addTask {
-      width: 30px;
-      height: 30px;
-    }
-  }
+}
   

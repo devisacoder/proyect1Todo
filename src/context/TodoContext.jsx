@@ -3,7 +3,6 @@ import {
   useEffect, 
   useState 
 } from "react"
-
 const API = "http://alb-1-1267904391.us-east-1.elb.amazonaws.com/task"
 
 export const TodoContext = createContext()
